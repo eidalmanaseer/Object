@@ -6,7 +6,14 @@ console.log('Here is : ', 'Object')
 Create an object represents you
 have your first name, last name, age, dob(date of birth), favorite food (3),favorite movie (5)
 */
-
+var info = {
+  firstName: "Eid",
+  lastNmae: "Al-manaseer",
+  age: 28,
+  dob: "26-9-1991",
+  favMovie: ["alfarooq", "khalid bin alwaleed", "Titanic"],
+  favFood: ["pitza", "mahshi", "mlokhiah"]
+}
 
 
 
@@ -30,6 +37,21 @@ and return all the first name of the person insides
 Ex: firstName(persons) => ['John', 'Alex', 'Alice', 'Thor', 'Soso']
 */
 
+function firstName(persons){
+   var result=""
+  for (i=0;i< persons.length;i++){
+
+  
+    result =result+ ',' +persons[i].name.first
+    
+  }
+  return [result]
+}
+
+
+
+
+
 
 /*
 3
@@ -40,7 +62,17 @@ and return the average age of those persons
 
 Ex: averageAge(persons) => 41.2
 */
+function averageAge(persons){
+  var avg= 0
+  for (i=0;i< persons.length;i++){
 
+  
+    avg =avg+persons[i].age
+    
+    
+  }
+  return avg/persons.length;
+}
 
 /*
 4
@@ -51,6 +83,20 @@ and return the full name of the older person
 
 Ex: olderPerson(persons) => "Soso Al-Amora"
 */
+
+
+function olderPerson(persons) {
+  var result = ""
+
+  for (i = 0; i < persons.length; i++) {
+    if (persons[0].age > persons[i].age) {
+      result = persons[0]["name"]["first"] + " " + persons[0]["name"]["last"] 
+    }
+    else { result = persons[i]["name"]["first"]  + " " + persons[i]["name"]["last"]  }
+  }
+
+  return result
+}
 
 
 /*
@@ -98,7 +144,6 @@ Ex: repeatWord("My name is alex mercer class name B baba mama hello Hello HELLO"
   hello:3
 }
 */
-
 
 
 /*
@@ -213,7 +258,7 @@ make this object => {a:1,b:3,c:4}
 to be this object {a:4,c:66}
 **hint: Search on MDN how to remove a key/value from an object
 */
-
+ 
 
 /*
 18
